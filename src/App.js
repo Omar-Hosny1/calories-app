@@ -1,10 +1,13 @@
 import React from "react";
 import "./App.css";
+import Header from "./components/Header/Header";
+import UserDataForm from "./components/UserDataForm/UserDataForm";
 
 function App() {
   return (
     <div className="App">
-      <h>Hello Omar</h>
+      <Header />
+      <UserDataForm />
     </div>
   );
 }
