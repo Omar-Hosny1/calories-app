@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./UserDataForm.css";
 function UserDataForm() {
+  let [userData, setUserData] = useState({});
   return (
     <div className="user-data-form">
       <div className="user-form">
@@ -15,6 +16,25 @@ function UserDataForm() {
           <input placeholder="Age" />
           <input placeholder="Weight" />
           <input placeholder="Height" />
+        </div>
+        <div className="activity">
+          <span className="activity-span">Activity Level</span>
+          <p>
+            <strong>Middle : </strong> Activity that burns an additional 400-650
+            calories for females or 500-800 calories for males
+          </p>
+          <div className="line"></div>
+          <div className="lvl">
+            <div className="active-circle">
+              <span>LOW</span>
+            </div>
+            <div className="circle">
+              <span>MIDDLE</span>
+            </div>
+            <div className="circle">
+              <span>HIGH</span>
+            </div>
+          </div>
         </div>
         <div className="goals">
           <span>Goals</span>
