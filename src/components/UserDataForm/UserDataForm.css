@@ -1,12 +1,13 @@
 .user-data-form {
   width: 50%;
   height: calc(100vh - 51.21px);
-  position: absolute;
-  right: 0;
+  position: relative;
+
   background-color: rgb(245 125 52);
   box-sizing: border-box;
   padding: 50px 90px;
   top: 51.21px;
+  z-index: 10;
 }
 
 .male-female span {
@@ -160,4 +161,36 @@
   margin: 0;
   text-transform: capitalize;
   font-weight: 300;
+}
+.calc-btns {
+  position: relative;
+  top: 25px;
+}
+.right-win {
+  animation: rightWin 2s forwards ease;
+}
+@keyframes rightWin {
+  0% {
+    /* left: 0; */
+    margin-left: 0;
+  }
+  100% {
+    /* right: 0; */
+    margin-left: 50%;
+  }
+}
+
+.left-win {
+  animation: leftWin 2s forwards ease;
+}
+
+@keyframes leftWin {
+  0% {
+    /* left: 0; */
+    margin-left: 50%;
+  }
+  100% {
+    /* right: 0; */
+    margin-left: 0%;
+  }
 }

@@ -3,38 +3,101 @@ import "./UserDataForm.css";
 
 const initState = {
   gender: null,
-  age: 0,
-  weight: 0,
-  height: 0,
+  age: "",
+  weight: "",
+  height: "",
   activity: null,
   goal: null,
 };
+
 function userDataFn(state, action) {
-  if (action.id == "AGE") return { ...initState, age: action.age };
-  else if (action.id == "WEIGHT") return { ...initState, weight: action.age };
-  else if (action.id == "HEIGHT") return { ...initState, height: action.age };
-  else if (action.id == "LOSE") return { ...initState, goal: "LOSE" };
-  else if (action.id == "GAIN") return { ...initState, goal: "GAIN" };
-  else if (action.id == "MAINTAIN") return { ...initState, goal: "MAINTAIN" };
+  if (action.id === "AGE") return { ...state, age: action.age };
+  else if (action.id === "WEIGHT") return { ...state, weight: action.weight };
+  else if (action.id === "HEIGHT") return { ...state, height: action.height };
+  else if (action.id === "LOSE") return { ...state, goal: "LOSE" };
+  else if (action.id === "GAIN") return { ...state, goal: "GAIN" };
+  else if (action.id === "MAINTAIN") return { ...state, goal: "MAINTAIN" };
+  else if (action.id === "MALE") return { ...state, gender: "MALE" };
+  else if (action.id === "FEMALE") return { ...state, gender: "FEMALE" };
+  else if (action.id === "LOW") return { ...state, activity: "LOW" };
+  else if (action.id === "MIDDLE") return { ...state, activity: "MIDDLE" };
+  else if (action.id === "HIGH") return { ...state, activity: "HIGH" };
+  else return initState;
 }
-function UserDataForm() {
+
+function UserDataForm(props) {
+  const [isCal, setIsCalc] = useState(false);
+
   const [userData, dispachFn] = useReducer(userDataFn, {
     gender: null,
-    age: 0,
-    weight: 0,
-    height: 0,
+    age: "",
+    weight: "",
+    height: "",
     activity: null,
     goal: null,
   });
-  // userData
+
+  const submitHandler = () => {
+    if (userData.gender == null) {
+      alert("ENTER YOUR GENDER");
+      return;
+    }
+    if (userData.age >= 100) {
+      alert("YOUR AGE MUST BE LESS THAN 100Y");
+      return;
+    }
+    if (!userData.age || !Number(+userData.age)) {
+      alert("ENTER A VALID AGE");
+      return;
+    }
+    if (!userData.weight || !Number(+userData.weight)) {
+      alert("ENTER A VALID WEIGHT");
+      return;
+    }
+    if (!userData.height || !Number(+userData.height)) {
+      alert("ENTER A VALID HEIGHT");
+      return;
+    }
+    if (userData.activity == null) {
+      alert("ENTER YOUR ACTIVITY");
+      return;
+    }
+    if (userData.goal == null) {
+      alert("ENTER YOUR GOAL");
+      return;
+    }
+    setIsCalc(true);
+    props.enteredUserData(userData);
+  };
+
   return (
-    <div className="user-data-form">
+    <div
+      className={isCal ? "user-data-form left-win" : "user-data-form right-win"}
+    >
       <div className="user-form">
         <div className="male-female">
           <span>Body Parameters</span>
           <div className="male-female__btns">
-            <button className="active btn-form">Male</button>
-            <button className="btn-form not-active">Female</button>
+            <button
+              className={
+                userData.gender == "MALE"
+                  ? "active btn-form"
+                  : "not-active btn-form"
+              }
+              onClick={() => dispachFn({ id: "MALE" })}
+            >
+              Male
+            </button>
+            <button
+              className={
+                userData.gender == "FEMALE"
+                  ? "active btn-form"
+                  : "not-active btn-form"
+              }
+              onClick={() => dispachFn({ id: "FEMALE" })}
+            >
+              Female
+            </button>
           </div>
         </div>
         <div className="age-weight-height">
@@ -68,13 +131,28 @@ function UserDataForm() {
           </p>
           <div className="line"></div>
           <div className="lvl">
-            <div className="active-circle">
+            <div
+              className={
+                userData.activity === "LOW" ? "active-circle" : "circle"
+              }
+              onClick={() => dispachFn({ id: "LOW" })}
+            >
               <span>LOW</span>
             </div>
-            <div className="circle">
+            <div
+              className={
+                userData.activity === "MIDDLE" ? "active-circle" : "circle"
+              }
+              onClick={() => dispachFn({ id: "MIDDLE" })}
+            >
               <span>MIDDLE</span>
             </div>
-            <div className="circle">
+            <div
+              className={
+                userData.activity === "HIGH" ? "active-circle" : "circle"
+              }
+              onClick={() => dispachFn({ id: "HIGH" })}
+            >
               <span>HIGH</span>
             </div>
           </div>
@@ -83,19 +161,19 @@ function UserDataForm() {
           <span>Goals</span>
           <div className="goals__btns">
             <button
-              className={userData.goal == "LOSE" ? "active" : "not-active"}
+              className={userData.goal === "LOSE" ? "active" : "not-active"}
               onClick={() => dispachFn({ id: "LOSE" })}
             >
               LOSE
             </button>
             <button
-              className={userData.goal == "MAINTAIN" ? "active" : "not-active"}
+              className={userData.goal === "MAINTAIN" ? "active" : "not-active"}
               onClick={() => dispachFn({ id: "MAINTAIN" })}
             >
               MAINTAIN
             </button>
             <button
-              className={userData.goal == "GAIN" ? "active" : "not-active"}
+              className={userData.goal === "GAIN" ? "active" : "not-active"}
               onClick={() => dispachFn({ id: "GAIN" })}
             >
               GAIN
@@ -103,8 +181,15 @@ function UserDataForm() {
           </div>
         </div>
         <div className="calc-btns">
-          <button>clear</button>
-          <button>Calculate</button>
+          <button
+            onClick={() => {
+              dispachFn("reset");
+              setIsCalc(false);
+            }}
+          >
+            clear
+          </button>
+          <button onClick={submitHandler}>Calculate</button>
         </div>
       </div>
     </div>
