@@ -1,7 +1,32 @@
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import "./UserDataForm.css";
+
+const initState = {
+  gender: null,
+  age: 0,
+  weight: 0,
+  height: 0,
+  activity: null,
+  goal: null,
+};
+function userDataFn(state, action) {
+  if (action.id == "AGE") return { ...initState, age: action.age };
+  else if (action.id == "WEIGHT") return { ...initState, weight: action.age };
+  else if (action.id == "HEIGHT") return { ...initState, height: action.age };
+  else if (action.id == "LOSE") return { ...initState, goal: "LOSE" };
+  else if (action.id == "GAIN") return { ...initState, goal: "GAIN" };
+  else if (action.id == "MAINTAIN") return { ...initState, goal: "MAINTAIN" };
+}
 function UserDataForm() {
-  let [userData, setUserData] = useState({});
+  const [userData, dispachFn] = useReducer(userDataFn, {
+    gender: null,
+    age: 0,
+    weight: 0,
+    height: 0,
+    activity: null,
+    goal: null,
+  });
+  // userData
   return (
     <div className="user-data-form">
       <div className="user-form">
@@ -13,9 +38,27 @@ function UserDataForm() {
           </div>
         </div>
         <div className="age-weight-height">
-          <input placeholder="Age" />
-          <input placeholder="Weight" />
-          <input placeholder="Height" />
+          <input
+            placeholder="Age"
+            value={userData.age}
+            onChange={(e) => {
+              dispachFn({ id: "AGE", age: e.target.value });
+            }}
+          />
+          <input
+            placeholder="Weight"
+            value={userData.weight}
+            onChange={(e) => {
+              dispachFn({ id: "WEIGHT", weight: e.target.value });
+            }}
+          />
+          <input
+            placeholder="Height"
+            value={userData.height}
+            onChange={(e) => {
+              dispachFn({ id: "HEIGHT", height: e.target.value });
+            }}
+          />
         </div>
         <div className="activity">
           <span className="activity-span">Activity Level</span>
@@ -39,9 +82,24 @@ function UserDataForm() {
         <div className="goals">
           <span>Goals</span>
           <div className="goals__btns">
-            <button className="active">LOSE</button>
-            <button className="not-active">MAINTAIN</button>
-            <button className="not-active">GAIN</button>
+            <button
+              className={userData.goal == "LOSE" ? "active" : "not-active"}
+              onClick={() => dispachFn({ id: "LOSE" })}
+            >
+              LOSE
+            </button>
+            <button
+              className={userData.goal == "MAINTAIN" ? "active" : "not-active"}
+              onClick={() => dispachFn({ id: "MAINTAIN" })}
+            >
+              MAINTAIN
+            </button>
+            <button
+              className={userData.goal == "GAIN" ? "active" : "not-active"}
+              onClick={() => dispachFn({ id: "GAIN" })}
+            >
+              GAIN
+            </button>
           </div>
         </div>
         <div className="calc-btns">
