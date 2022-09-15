@@ -26,7 +26,7 @@ function userDataFn(state, action) {
 }
 
 function UserDataForm(props) {
-  const [isCal, setIsCalc] = useState(false);
+  const [isCal, setIsCalc] = useState(null);
 
   const [userData, dispachFn] = useReducer(userDataFn, initState);
 
@@ -43,11 +43,19 @@ function UserDataForm(props) {
       alert("ENTER A VALID AGE");
       return;
     }
-    if (!userData.weight || !Number(+userData.weight)) {
+    if (
+      !userData.weight ||
+      !Number(+userData.weight) ||
+      +userData.weight < 10
+    ) {
       alert("ENTER A VALID WEIGHT");
       return;
     }
-    if (!userData.height || !Number(+userData.height)) {
+    if (
+      !userData.height ||
+      !Number(+userData.height) ||
+      +userData.height < 10
+    ) {
       alert("ENTER A VALID HEIGHT");
       return;
     }
@@ -65,7 +73,13 @@ function UserDataForm(props) {
 
   return (
     <div
-      className={isCal ? "user-data-form left-win" : "user-data-form right-win"}
+      className={
+        isCal == true
+          ? "user-data-form left-win"
+          : isCal == false
+          ? "user-data-form right-win"
+          : "user-data-form"
+      }
     >
       <div className="user-form">
         <div className="male-female">

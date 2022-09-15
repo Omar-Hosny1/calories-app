@@ -21,6 +21,11 @@ export default function Calories({ data }) {
           447.593
       );
     }
+    if (data.goal == "LOSE") {
+      setCalories((calories) => (calories -= 300));
+    } else if (data.goal == "GAIN") {
+      setCalories((calories) => (calories += 300));
+    }
   }, [data]);
 
   return (
