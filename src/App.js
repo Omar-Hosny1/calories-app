@@ -17,7 +17,6 @@ function App() {
       weight: userData.weight,
       age: userData.age,
     });
-    console.log(userData);
   };
   return (
     <div className="App">
