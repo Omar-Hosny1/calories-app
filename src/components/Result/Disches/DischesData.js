@@ -1,71 +1,72 @@
+import ChickPea from "../../../images/chickpea.jpg";
+import SpottedPig from "../../../images/spotted pig's.jpg";
+import FetaStuffed from "../../../images/feta stuffed.jpg";
+import FriedSteak from "../../../images/fried-round-steakjpg.jpg";
+import Spagetti from "../../../images/sapgetti-and-meat-balls.jpg";
+import BeetSmothie from "../../../images/beet smothie.jpg";
+import GreekSalad from "../../../images/greek salad.jpg";
+import LesWhoopies from "../../../images/Les Whoopies.jpeg";
+import MexicanRice from "../../../images/mexican-rice.jpg";
+import OrnageFrench from "../../../images/orange-french.jpg";
+
 export const data = [
   {
     id: 1,
-    image:
-      "https://edamam-product-images.s3.amazonaws.com/web-img/68a/68ad288ba387cfafd7d8b018f471432a.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEBEaCXVzLWVhc3QtMSJHMEUCIQC1Xu%2BZBZehGQqO06v5l8GuhqtJi5ZqcCYOw1oPP8z97wIgD%2FdbnqV589HU5JOXyNnxEpNxqcZI1xaeDeiN%2FA%2FBNMAq1QQIqv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwxODcwMTcxNTA5ODYiDJnKSlk%2Fhmaos7jEGyqpBGGsNUHwQ5umEvodvuhr4Bb1IF7Vq69WWAKewkly2ohF%2FAtzQGChELc1RTX%2BAWw27SffCPq02LUdenIetzZ7EVK7pBJ3cnVJQeAv%2B8CNp1%2FthXdVavBPo8I4dzO6Yk5LZUJYZcUbwtwewGJyiNT2dYXkLndAM22gzdU40zMUchwEacM7Vfgis3e5IVdLs8pWsLulf6f5txPCWhi5gGRBXk53FSborQ8l8Vuw0nIemHMrDLA4jS9oI28HBhH5EZ8Hou3AtjJENGGzFw7NwGYVyol2LXtwdqAW99tw5t%2B95A%2FK0OGt4ynD27gFqcOgKAw9Kd3XPTKDWeZPMAaBasIz%2BxxphN8URqTqFT4OPOysZg8T2CPQ%2BsTXlaQwCddLOwgpsWleu8Y%2FzHYDjG%2FXvOh2x2S%2FBCsOtGCj%2BP2hfh%2F6fkHbPgjKjz%2BZFxXq5revSccBPOQeMgtUYIR7RPtzSozKeCS23CS4fLwLHc08vozREAU0cdn6QxS1MzGLXwAk0A5Tj%2BgKqqp0uZeyWf0j7xTqW7GQwpNXa0hWaIHzSVArrV7FsrfI6YiAjkLlnHwvN4Emo7t5B0489kQwiE6dqc9J7TzdAoC%2BLFlVidZcsRZlMtJa452jGm3CxVb6fhvRrA6uuN8cMdiNlBdeb1Ci6dMM5fkKkys4pUtMUU37FngRXWFo8tf31i%2Bji9S5qS7HsBXLYlTlBpJKpcF7w7Wp%2ForlpdQ0mn6nZPQwco8wk%2BGCmQY6qQFECK8J3F2FTOe0jyAn%2FISjmGM4NYKKeiUl3jhCOF4BthQiosHnuhEsRGKlzYkp%2BehCK8W7UE7X0OLzx1XTjPuNi8B3pN85xU3I7Tl6Bn25BaWb7HMX%2BT1ymLKsXVFvqdD8N1CR%2Bp2yBF9wLzT3JXWQCTRK1xBc%2FJXSet%2B035ogPm2gGHcf%2BBmHFQpukTemMnMwfeHaCDvs5bW1uInqPJfD6FBYLHif0YjS&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220913T181909Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFADGV2HWT%2F20220913%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=b4583c1749340f4df9c5ed2072c4d3fb0a8773cf1a760d348a22a5e3a1bed6a8",
+    image: ChickPea,
     title: "ChickPea Salad",
     calories: 217,
   },
   {
     id: 2,
-    image:
-      "https://edamam-product-images.s3.amazonaws.com/web-img/dd7/dd7fc90db0533b15065389af432086f2.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEC4aCXVzLWVhc3QtMSJHMEUCIQDWUKytf1xQtYBHKV%2Fr6EYd99P4rJTF8FhGZgmDY6WpXQIgS4JT8FQgmxHhmTFoDwlVJEIDmPByTe5YgnfzqFMvOG8q1QQIx%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwxODcwMTcxNTA5ODYiDE111zf7gNpzbNXGliqpBD2So6m2HsGptsuDtDh3hPa2KgNhVgflpH4DO4oB08Zcaenn8esu2zz0Cpj4Mm8dFX543UefBfeO78slsFgnwlueXxvzjGi398Xij4%2Bzow7i7KsQe0SlJgoLd8OeaiBNS3cODTQhj4Nz8fFaSbmRFc2%2F0PLv73rR4lYIatBYAi1%2FpF5fd66DaCCaQ69jmEdEZSP6ZG8pNvDKFkIe44ns8Ao9qL5H5Rq4uv5WgzWx1xAQbiwh0Fl72W65ygeXsXCt8%2F4oDdrswvhCEBGLYwHfwxmI%2Fpl1QyA679izUzKu4UQZ3G893TXEQtmgPDdDZv101Xt3H68orx3ilbUprIACvLX69TTZzs5D%2FpF8n%2Fs8U847GpxO9FopnnPB5UZeJnMW7%2BUTpwOIONxvU7NFX7bVykHcLBHmY08L1yuPruFTSwMJsvegLCj8e6N34rtlZp%2BxZ9Xb2dhqv4lY3fO0cO8H2mSGTnS3AWNkz2eCwyoKUatNnWG%2F%2BtDqFinkK%2BwiZLCnJrFp1y208CvyHx2E5nIg0degeXW%2FE6Wjrb0HX%2BwpI66qA7Gb16h1yyftJs2CQbCIFdshGdF6GOuiMFPwb%2Bale0aXyOMm2yxneI7VRsZhBubPcMaVr%2FAoPmifR8nD4lTR%2FcrHLkLcdRwB7e05yIPKfgraPU%2BpP2GKbAOvUopN7J8DL2YVp4ZeEz0S0zogJu7BjdDBDc1G4iKW%2F91sFq77geV%2Bvhx8Q6OggZAwtpaJmQY6qQFZ9vcKCPhc87n19Qf5njEjTKlGsA13XoFwflNvhFWSfbOQxTvalhErKsEx4b0luFF4K%2F6ICe3ICP3dNAJ47DLP5zYCIwLivFlesjcfEsOp9%2Bby7VnIujg0gKYfyXEGAuol%2Fj2M3QkeFuIEk0Y4Drar5FzGLaG%2BqI9BD4M8X%2FsuEmuLahM9GNW0mWG60VZUaLm2KnCaUBJ1uGK5tavKqsjWfxoSu4%2BgwVwW&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220914T222723Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFKBHUE3GY%2F20220914%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=c700435da1d56cb9ad422caa55d1f4efe3b68b1fc12c80c2c32560bf2c459455",
+    image: SpottedPig,
     title: "The Spotted Pig's",
     calories: 817,
   },
   {
     id: 3,
-    image:
-      "https://edamam-product-images.s3.amazonaws.com/web-img/78d/78dbf8b3b50fcb868c303ce9b88bf74b?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEC4aCXVzLWVhc3QtMSJHMEUCIQDWUKytf1xQtYBHKV%2Fr6EYd99P4rJTF8FhGZgmDY6WpXQIgS4JT8FQgmxHhmTFoDwlVJEIDmPByTe5YgnfzqFMvOG8q1QQIx%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwxODcwMTcxNTA5ODYiDE111zf7gNpzbNXGliqpBD2So6m2HsGptsuDtDh3hPa2KgNhVgflpH4DO4oB08Zcaenn8esu2zz0Cpj4Mm8dFX543UefBfeO78slsFgnwlueXxvzjGi398Xij4%2Bzow7i7KsQe0SlJgoLd8OeaiBNS3cODTQhj4Nz8fFaSbmRFc2%2F0PLv73rR4lYIatBYAi1%2FpF5fd66DaCCaQ69jmEdEZSP6ZG8pNvDKFkIe44ns8Ao9qL5H5Rq4uv5WgzWx1xAQbiwh0Fl72W65ygeXsXCt8%2F4oDdrswvhCEBGLYwHfwxmI%2Fpl1QyA679izUzKu4UQZ3G893TXEQtmgPDdDZv101Xt3H68orx3ilbUprIACvLX69TTZzs5D%2FpF8n%2Fs8U847GpxO9FopnnPB5UZeJnMW7%2BUTpwOIONxvU7NFX7bVykHcLBHmY08L1yuPruFTSwMJsvegLCj8e6N34rtlZp%2BxZ9Xb2dhqv4lY3fO0cO8H2mSGTnS3AWNkz2eCwyoKUatNnWG%2F%2BtDqFinkK%2BwiZLCnJrFp1y208CvyHx2E5nIg0degeXW%2FE6Wjrb0HX%2BwpI66qA7Gb16h1yyftJs2CQbCIFdshGdF6GOuiMFPwb%2Bale0aXyOMm2yxneI7VRsZhBubPcMaVr%2FAoPmifR8nD4lTR%2FcrHLkLcdRwB7e05yIPKfgraPU%2BpP2GKbAOvUopN7J8DL2YVp4ZeEz0S0zogJu7BjdDBDc1G4iKW%2F91sFq77geV%2Bvhx8Q6OggZAwtpaJmQY6qQFZ9vcKCPhc87n19Qf5njEjTKlGsA13XoFwflNvhFWSfbOQxTvalhErKsEx4b0luFF4K%2F6ICe3ICP3dNAJ47DLP5zYCIwLivFlesjcfEsOp9%2Bby7VnIujg0gKYfyXEGAuol%2Fj2M3QkeFuIEk0Y4Drar5FzGLaG%2BqI9BD4M8X%2FsuEmuLahM9GNW0mWG60VZUaLm2KnCaUBJ1uGK5tavKqsjWfxoSu4%2BgwVwW&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220914T222723Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFKBHUE3GY%2F20220914%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=91c9d61e5c54cd3f98b6c3288213202f0bab3a47ddd9e6f5aaf89f612c001ad9",
+    image: FetaStuffed,
     title: "Feta-Stuffed",
     calories: 685,
   },
   {
     id: 4,
-    image:
-      "https://edamam-product-images.s3.amazonaws.com/web-img/29c/29cf1353aa7b6cfd6bf1f2e6e2f6cc53.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEC8aCXVzLWVhc3QtMSJHMEUCICSqsfzbOw%2FV%2BplbxEU6tGMhbg38D%2BnDP09%2FZSrRUfNEAiEA%2Bf6ZdZ7LYi5l9fXy02Gvw25Tupb7TRmRBfADFpCf%2BYQq1QQIx%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwxODcwMTcxNTA5ODYiDGMFAt1hegsOtSDNbCqpBGSXICCBvBIDZZyVw2XUbhnKiGxbz6cuVrjWGP5XBMzKp8yfk9lCijGzNjPMnSt5nuw7FbA%2BznoQYAFONNdFPpl%2Bc919IDz0xzR6jgUuEKiW17UP6P93Scm5doQKUR8D76fw7tY5R6vgh792reEiFZXGmmYynpo3yAC4zKN0VofNAmCl2uMMkTLYwgk3yxwGCXIOJ4L7xHr30O4hxMpNvEeaaG05BNnhxWZvZcF6OJvXBzSSwe4spDS6qfflIoIEcHmvYjLwnaCEzvbRvFQ7jT%2BtrrQEqJYCy9CjHb9hsSp1VSZJu8ksgNTzBvhmvC2hQthwfTuZibnffPVEUG16N6stNc5lrDjeIW241qjtxo1cJ2VmGImG55bd0x4EKxSKlKV%2FmH9IRk3PESoiuF9a%2BeUaevcOd6l6v2izWhfAUDcD7QSEfF%2FMqk9TdAfNpOwOHAT5bNagtcQ279Ht09TZ%2B10qR6BVSZrz2wXTuOoXTdW9x73DZEiWEZPvkMNa5OefJikq7BVynsr7F2QFPkZ2C6bqyotlVvNFWtWVPxIwahOLTJ7b%2BipYkaCUB9M%2BwuHlX9EC8AgjaWMan%2FaZsSk7210N4DTxjksb%2Fb4yBkEn9ezVgFy0gzcB5v1tFM9f%2B15nF3xhC7Tk4hW2hBW2ctSzC96f9vONBnV1p6g%2BkPgrgrw%2F9vmJ6Hq%2FtimhH83h7cX1taeRfjO%2BoPApY%2BUB8f%2FubdbsTzP8HUcikWkwy6eJmQY6qQEhfaCBO90C0ZNyVgx9ef3Tq9kd3hZ39Dcr%2BTni%2B5Z%2FwaXAxryH4gqRxsf7OpVLX%2Fdrvll%2F%2FLXaWLBU%2Fm1rcN5lhEXt9ruUGAy9PsR0ZMV2QlqvAMfaGtnDm1Q6KZZJju6VuDWOUyqFK3UdYyvx2TDwWlO%2Fj0PmZAz5DgYtrKQAmu10V5CksdSXj9tXsfJbqd6B0ORbhVIcyt6j71fiDMcefFqTEGhiHRQG&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220914T223005Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFBSRQCA32%2F20220914%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=00a331af2aab6e4fb31652a10b3ba1ec2007dfe0bedfca10093ff7efc80f654c",
+    image: FriedSteak,
     title: "Fried Round Steak",
     calories: 654,
   },
   {
     id: 5,
-    image:
-      "https://edamam-product-images.s3.amazonaws.com/web-img/01e/01ec5c302fa8071f0ee32d8358d75f36?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEC4aCXVzLWVhc3QtMSJHMEUCIQDWUKytf1xQtYBHKV%2Fr6EYd99P4rJTF8FhGZgmDY6WpXQIgS4JT8FQgmxHhmTFoDwlVJEIDmPByTe5YgnfzqFMvOG8q1QQIx%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwxODcwMTcxNTA5ODYiDE111zf7gNpzbNXGliqpBD2So6m2HsGptsuDtDh3hPa2KgNhVgflpH4DO4oB08Zcaenn8esu2zz0Cpj4Mm8dFX543UefBfeO78slsFgnwlueXxvzjGi398Xij4%2Bzow7i7KsQe0SlJgoLd8OeaiBNS3cODTQhj4Nz8fFaSbmRFc2%2F0PLv73rR4lYIatBYAi1%2FpF5fd66DaCCaQ69jmEdEZSP6ZG8pNvDKFkIe44ns8Ao9qL5H5Rq4uv5WgzWx1xAQbiwh0Fl72W65ygeXsXCt8%2F4oDdrswvhCEBGLYwHfwxmI%2Fpl1QyA679izUzKu4UQZ3G893TXEQtmgPDdDZv101Xt3H68orx3ilbUprIACvLX69TTZzs5D%2FpF8n%2Fs8U847GpxO9FopnnPB5UZeJnMW7%2BUTpwOIONxvU7NFX7bVykHcLBHmY08L1yuPruFTSwMJsvegLCj8e6N34rtlZp%2BxZ9Xb2dhqv4lY3fO0cO8H2mSGTnS3AWNkz2eCwyoKUatNnWG%2F%2BtDqFinkK%2BwiZLCnJrFp1y208CvyHx2E5nIg0degeXW%2FE6Wjrb0HX%2BwpI66qA7Gb16h1yyftJs2CQbCIFdshGdF6GOuiMFPwb%2Bale0aXyOMm2yxneI7VRsZhBubPcMaVr%2FAoPmifR8nD4lTR%2FcrHLkLcdRwB7e05yIPKfgraPU%2BpP2GKbAOvUopN7J8DL2YVp4ZeEz0S0zogJu7BjdDBDc1G4iKW%2F91sFq77geV%2Bvhx8Q6OggZAwtpaJmQY6qQFZ9vcKCPhc87n19Qf5njEjTKlGsA13XoFwflNvhFWSfbOQxTvalhErKsEx4b0luFF4K%2F6ICe3ICP3dNAJ47DLP5zYCIwLivFlesjcfEsOp9%2Bby7VnIujg0gKYfyXEGAuol%2Fj2M3QkeFuIEk0Y4Drar5FzGLaG%2BqI9BD4M8X%2FsuEmuLahM9GNW0mWG60VZUaLm2KnCaUBJ1uGK5tavKqsjWfxoSu4%2BgwVwW&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220914T223210Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3599&X-Amz-Credential=ASIASXCYXIIFKBHUE3GY%2F20220914%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=41bbe39a900be0ab1ff39eb4f2b02334e4c05ab3c682a46bb89bd2228fb19dea",
+    image: Spagetti,
     title: "Spagetti and Meat Balls",
     calories: 443,
   },
   {
     id: 6,
-    image:
-      "https://edamam-product-images.s3.amazonaws.com/web-img/c44/c44b9b3a19fb558beb09955d28535445.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDkaCXVzLWVhc3QtMSJGMEQCIB4dyqjKFp8zTaK9v4o03wsiE%2BxEvQS5GN6duZrt8R0%2FAiAbqbfYsoC1DKzUEtp%2BAwPeQfW65F0cpybXkpBxE6BfTCrVBAjS%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDE4NzAxNzE1MDk4NiIM1Mx0a%2BUk8T7PnhnLKqkE%2BwnfahBxcAGuADL9QFXftJRo3ehaoIB4BxWge6754PI6FdqA5cC4v9wnhiIAsjfx0Hdr7U%2BFmK7PHA2AalJDhhu%2FHu%2FUPGkvlAUvRv2JqLQcStX%2BHfP%2BlPvxKYpLF3uXi%2BPk5bsQCpeB6HYK2w%2BdV09kZzUSqipIQ0lw8eT4Fdyg7fekKxitsaq4Hdo4b%2FvxJ7omDydBDKLahx15yBUmAAO2A%2FmD6Pw8wn9EpanmAnWuoGumL0xEV6XBKxUYUdbj1mDQhmXm0Cgw33HPUEy55kn6c%2Bsnrp7SuBul%2FrqCFHsOVQT9U0PnWFykT00ZUAeple612m9FFVnsXwMd2t6%2BO%2FVyCETbOoE4%2BEL%2BHbjdYnUgSNF7e10hskU14yg7MCQRrfT5qN6LiM2FfWRnwKLhdgdd6DbKK5r5hr8Kg%2B0JvMX2UxrtbbcpPA%2FqLJ91ofHoSvT5jaXOcRcDHO7gu2mJJapNvIgIBEfKs9%2FUsTCWN%2F%2Fw%2FUxwUR%2BRFKKviwKljvI%2F%2BIzltTh45lDeyiCaVr62pncB1qVpswkjxbqylofKvDbFRHMFo%2BuLkSrq55lW9swZVtGcMyyU6YMo5Pf66rA1N3%2By1zjCE5yqjH2AU5PCAMTD3uydI8z3DEPCeEm8X5ozOlSFpMX50qaYvN19ywW6KaXdmOFmrv%2BYrLf5e2DsMjSu7PGkdJ7LbBziVbOdBJFQByO8pIv%2BugCVjwKjRIHLYi4KVYQ83UNjVjDRy4uZBjqqAcP%2BxzBh2Ks1GRGUocKLwqdZH7h%2FOcmJTKgBFEf6v5nsIZlxHAMrUfSsa16086v55TAMcJT2sqcjALvndXNuy5mO0BSeAgDK%2FRfeqtvdIVHPCyljIo9nUrDUzOp6KrVPwYMFWN%2B%2FcaGaLq%2FZvTl9tl19T8hOipusRDTVQ9IZGpvs15hPSDteGZVdlq%2Bym1TXd%2BUXikfMD2lA%2BJaixYmgDVSFbUJyo7x9Mbu%2F&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220915T094447Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFEXOLPNUH%2F20220915%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=036c7b477542b927ddf88690e3e50ee9b377ed6c84f7e4e50f6342c4f694872a",
-    title: "Best Smoothie with Raspberries",
+    image: BeetSmothie,
+    title: "Beet Smoothie with Raspberries",
     calories: 240,
   },
   {
     id: 7,
-    image:
-      "https://edamam-product-images.s3.amazonaws.com/web-img/5ac/5ac330f6e24a8cc6dc3cc53a04734e12.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDkaCXVzLWVhc3QtMSJGMEQCIB4dyqjKFp8zTaK9v4o03wsiE%2BxEvQS5GN6duZrt8R0%2FAiAbqbfYsoC1DKzUEtp%2BAwPeQfW65F0cpybXkpBxE6BfTCrVBAjS%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDE4NzAxNzE1MDk4NiIM1Mx0a%2BUk8T7PnhnLKqkE%2BwnfahBxcAGuADL9QFXftJRo3ehaoIB4BxWge6754PI6FdqA5cC4v9wnhiIAsjfx0Hdr7U%2BFmK7PHA2AalJDhhu%2FHu%2FUPGkvlAUvRv2JqLQcStX%2BHfP%2BlPvxKYpLF3uXi%2BPk5bsQCpeB6HYK2w%2BdV09kZzUSqipIQ0lw8eT4Fdyg7fekKxitsaq4Hdo4b%2FvxJ7omDydBDKLahx15yBUmAAO2A%2FmD6Pw8wn9EpanmAnWuoGumL0xEV6XBKxUYUdbj1mDQhmXm0Cgw33HPUEy55kn6c%2Bsnrp7SuBul%2FrqCFHsOVQT9U0PnWFykT00ZUAeple612m9FFVnsXwMd2t6%2BO%2FVyCETbOoE4%2BEL%2BHbjdYnUgSNF7e10hskU14yg7MCQRrfT5qN6LiM2FfWRnwKLhdgdd6DbKK5r5hr8Kg%2B0JvMX2UxrtbbcpPA%2FqLJ91ofHoSvT5jaXOcRcDHO7gu2mJJapNvIgIBEfKs9%2FUsTCWN%2F%2Fw%2FUxwUR%2BRFKKviwKljvI%2F%2BIzltTh45lDeyiCaVr62pncB1qVpswkjxbqylofKvDbFRHMFo%2BuLkSrq55lW9swZVtGcMyyU6YMo5Pf66rA1N3%2By1zjCE5yqjH2AU5PCAMTD3uydI8z3DEPCeEm8X5ozOlSFpMX50qaYvN19ywW6KaXdmOFmrv%2BYrLf5e2DsMjSu7PGkdJ7LbBziVbOdBJFQByO8pIv%2BugCVjwKjRIHLYi4KVYQ83UNjVjDRy4uZBjqqAcP%2BxzBh2Ks1GRGUocKLwqdZH7h%2FOcmJTKgBFEf6v5nsIZlxHAMrUfSsa16086v55TAMcJT2sqcjALvndXNuy5mO0BSeAgDK%2FRfeqtvdIVHPCyljIo9nUrDUzOp6KrVPwYMFWN%2B%2FcaGaLq%2FZvTl9tl19T8hOipusRDTVQ9IZGpvs15hPSDteGZVdlq%2Bym1TXd%2BUXikfMD2lA%2BJaixYmgDVSFbUJyo7x9Mbu%2F&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220915T093720Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFEXOLPNUH%2F20220915%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=15f1180935e0681cf7268b7bb803b4f2d0e06c5bb1a8bc69f34c8a1b7b279226",
+    image: GreekSalad,
     title: "Greek Quinoa Salad",
     calories: 223,
   },
   {
     id: 8,
-    image:
-      "https://edamam-product-images.s3.amazonaws.com/web-img/650/6501c0f86e2250b465cb700e28ba0388.jpeg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDkaCXVzLWVhc3QtMSJGMEQCIH784xpZxzsgpfJptCCmq%2BplOyG92FuP%2BQivq4%2FL%2FSh8AiBiuf%2FY0REYQ8bY04miwKLmZRw3EQZzTUfS0Bl1Hf3jxSrVBAjS%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDE4NzAxNzE1MDk4NiIMTmiWaggJuA9T0SuiKqkE66muSoR9XiNqSRMwrnE3hz89utwTZ9PjpqB6RLr3aWhYjz5uZSLaqG7UwCIMCsZFV7ZguINniok%2Fsu3La%2FZ74%2FOgJkZSQa0jZADK4hhjecmN66Q%2F4ccnRSE4GSddDlo3QbPtZdAc2L1exps6wFVefDBCEB%2F%2Fsaq6m7IxlQtd6BX4ixUm5nggSX%2Bj3vUFUPd%2FK67NgAwzl4xSzLYzthGo%2FwEz5n4IkFQBgVbXRN6nQR3TN5gozBUc9%2BAqV%2FQTxilQIVGCABpYSiIna%2FIJXeBtkxx9t4sdXcmA1LtHFn0THrn2VRUA2LQuaZfHLgpeMt0Y3%2FiD10Dstw8qSIg94KcVtFfEg%2FBpiHrNgfJpcCbSOL2MO34MOuhXwTLpI9LLb6Bg3Ms8ULJ15w0CZ83AL%2BWwODbl2LLAR5652Ip3nAXhVdMdjWbJvqTYsPj9egL2GfWvno4e9gHf5iPDFFmSEe4S6Mb7c4znhOx2c7N5FSfv7z1gyt4X6NfXwPcP2DZwz3mwqbOFLrW%2BXQw7y1APmNWSlTRDJx6WhSo8ZUw8MA3AOrpqwHeFtqlfQ%2FHgZGGGuz%2FjeRhbkeHRaHzFJANBANOuPpvrUna%2FidB4p8oemhY0HZW%2FGNBHfMgT5LKkaqRaZiPvQC4ga24C3EK2%2Fy9l%2Fb9%2F5GDJJO8tW3X4AxdlzIg%2B6Gy5ofeJIHTa5Dg%2BXFO9Uxl%2Fov6ctSiMOPXgLGNodbjh%2FieQt%2FXKly7CtzDl04uZBjqqAQA9eusRZrNLiBH793AZ6ycZAL0vbRIPfVXauO1nkImSzBCe9gYcSjyPLKTFaP7rvPSA3Uerk2tIpHmMlwiedy8%2FPhsAX1reCgtKBSYwH33TQW4ETvEQf8rh15a4GfXeKpqqi02DX5E11n62n0%2BEswDcVBH7z5rDFdF%2Fbzbn5N8yvdNUzxD9sihUAQRBK5kEMz4pXkXaqkLTGfxPcmAgJQik11WLnJp3Rtwz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220915T094016Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFILKZY65P%2F20220915%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=37c6570fa187e81b3eff08de7f9ce07120bc3230126e0f56c5420b19a4b09f9b",
+    image: LesWhoopies,
     title: "Les Whoopies",
     calories: 156,
   },
   {
     id: 9,
-    image:
-      "https://edamam-product-images.s3.amazonaws.com/web-img/ffd/ffd34774b5c9a1765e2c3692751fa81c.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDkaCXVzLWVhc3QtMSJGMEQCIH784xpZxzsgpfJptCCmq%2BplOyG92FuP%2BQivq4%2FL%2FSh8AiBiuf%2FY0REYQ8bY04miwKLmZRw3EQZzTUfS0Bl1Hf3jxSrVBAjS%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDE4NzAxNzE1MDk4NiIMTmiWaggJuA9T0SuiKqkE66muSoR9XiNqSRMwrnE3hz89utwTZ9PjpqB6RLr3aWhYjz5uZSLaqG7UwCIMCsZFV7ZguINniok%2Fsu3La%2FZ74%2FOgJkZSQa0jZADK4hhjecmN66Q%2F4ccnRSE4GSddDlo3QbPtZdAc2L1exps6wFVefDBCEB%2F%2Fsaq6m7IxlQtd6BX4ixUm5nggSX%2Bj3vUFUPd%2FK67NgAwzl4xSzLYzthGo%2FwEz5n4IkFQBgVbXRN6nQR3TN5gozBUc9%2BAqV%2FQTxilQIVGCABpYSiIna%2FIJXeBtkxx9t4sdXcmA1LtHFn0THrn2VRUA2LQuaZfHLgpeMt0Y3%2FiD10Dstw8qSIg94KcVtFfEg%2FBpiHrNgfJpcCbSOL2MO34MOuhXwTLpI9LLb6Bg3Ms8ULJ15w0CZ83AL%2BWwODbl2LLAR5652Ip3nAXhVdMdjWbJvqTYsPj9egL2GfWvno4e9gHf5iPDFFmSEe4S6Mb7c4znhOx2c7N5FSfv7z1gyt4X6NfXwPcP2DZwz3mwqbOFLrW%2BXQw7y1APmNWSlTRDJx6WhSo8ZUw8MA3AOrpqwHeFtqlfQ%2FHgZGGGuz%2FjeRhbkeHRaHzFJANBANOuPpvrUna%2FidB4p8oemhY0HZW%2FGNBHfMgT5LKkaqRaZiPvQC4ga24C3EK2%2Fy9l%2Fb9%2F5GDJJO8tW3X4AxdlzIg%2B6Gy5ofeJIHTa5Dg%2BXFO9Uxl%2Fov6ctSiMOPXgLGNodbjh%2FieQt%2FXKly7CtzDl04uZBjqqAQA9eusRZrNLiBH793AZ6ycZAL0vbRIPfVXauO1nkImSzBCe9gYcSjyPLKTFaP7rvPSA3Uerk2tIpHmMlwiedy8%2FPhsAX1reCgtKBSYwH33TQW4ETvEQf8rh15a4GfXeKpqqi02DX5E11n62n0%2BEswDcVBH7z5rDFdF%2Fbzbn5N8yvdNUzxD9sihUAQRBK5kEMz4pXkXaqkLTGfxPcmAgJQik11WLnJp3Rtwz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220915T094236Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFILKZY65P%2F20220915%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=b6b2f6d8a7a106547083290cf82b1649c2489fb6ad1379c82b8e177882ece19e",
+    image: MexicanRice,
     title: "Mexican Rice and beans",
     calories: 337,
   },
   {
     id: 10,
-    image:
-      "https://edamam-product-images.s3.amazonaws.com/web-img/5eb/5eb5991d61fb428587db745ed2610dee.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDkaCXVzLWVhc3QtMSJGMEQCIB4dyqjKFp8zTaK9v4o03wsiE%2BxEvQS5GN6duZrt8R0%2FAiAbqbfYsoC1DKzUEtp%2BAwPeQfW65F0cpybXkpBxE6BfTCrVBAjS%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDE4NzAxNzE1MDk4NiIM1Mx0a%2BUk8T7PnhnLKqkE%2BwnfahBxcAGuADL9QFXftJRo3ehaoIB4BxWge6754PI6FdqA5cC4v9wnhiIAsjfx0Hdr7U%2BFmK7PHA2AalJDhhu%2FHu%2FUPGkvlAUvRv2JqLQcStX%2BHfP%2BlPvxKYpLF3uXi%2BPk5bsQCpeB6HYK2w%2BdV09kZzUSqipIQ0lw8eT4Fdyg7fekKxitsaq4Hdo4b%2FvxJ7omDydBDKLahx15yBUmAAO2A%2FmD6Pw8wn9EpanmAnWuoGumL0xEV6XBKxUYUdbj1mDQhmXm0Cgw33HPUEy55kn6c%2Bsnrp7SuBul%2FrqCFHsOVQT9U0PnWFykT00ZUAeple612m9FFVnsXwMd2t6%2BO%2FVyCETbOoE4%2BEL%2BHbjdYnUgSNF7e10hskU14yg7MCQRrfT5qN6LiM2FfWRnwKLhdgdd6DbKK5r5hr8Kg%2B0JvMX2UxrtbbcpPA%2FqLJ91ofHoSvT5jaXOcRcDHO7gu2mJJapNvIgIBEfKs9%2FUsTCWN%2F%2Fw%2FUxwUR%2BRFKKviwKljvI%2F%2BIzltTh45lDeyiCaVr62pncB1qVpswkjxbqylofKvDbFRHMFo%2BuLkSrq55lW9swZVtGcMyyU6YMo5Pf66rA1N3%2By1zjCE5yqjH2AU5PCAMTD3uydI8z3DEPCeEm8X5ozOlSFpMX50qaYvN19ywW6KaXdmOFmrv%2BYrLf5e2DsMjSu7PGkdJ7LbBziVbOdBJFQByO8pIv%2BugCVjwKjRIHLYi4KVYQ83UNjVjDRy4uZBjqqAcP%2BxzBh2Ks1GRGUocKLwqdZH7h%2FOcmJTKgBFEf6v5nsIZlxHAMrUfSsa16086v55TAMcJT2sqcjALvndXNuy5mO0BSeAgDK%2FRfeqtvdIVHPCyljIo9nUrDUzOp6KrVPwYMFWN%2B%2FcaGaLq%2FZvTl9tl19T8hOipusRDTVQ9IZGpvs15hPSDteGZVdlq%2Bym1TXd%2BUXikfMD2lA%2BJaixYmgDVSFbUJyo7x9Mbu%2F&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220915T094444Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFEXOLPNUH%2F20220915%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=26a91dc7f86aa15a322b59f2306afbed4ea3b7f9ad622124aa4cfc4cc714f153",
+    image: OrnageFrench,
     title: "Blood Ornage French",
     calories: 196,
   },

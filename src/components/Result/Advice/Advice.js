@@ -9,7 +9,7 @@ export default function Advice({ goal }) {
       {goal === "LOSE" ? (
         <p style={{ fontSize: "20px" }}>
           Your Goal is {goal?.toLowerCase()} weight, You should eat less
-          calories per day than your own
+          calories per day as above
         </p>
       ) : goal === "MAINTAIN" ? (
         <p style={{ fontSize: "20px" }}>
@@ -19,7 +19,7 @@ export default function Advice({ goal }) {
       ) : (
         <p style={{ fontSize: "20px" }}>
           Your Goal is {goal?.toLowerCase()} weight, You should eat more
-          calories per day than your own
+          calories per day as above
         </p>
       )}
     </div>

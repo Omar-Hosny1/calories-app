@@ -74,9 +74,9 @@ function UserDataForm(props) {
   return (
     <div
       className={
-        isCal == true
+        isCal === true
           ? "user-data-form left-win"
-          : isCal == false
+          : isCal === false
           ? "user-data-form right-win"
           : "user-data-form"
       }
