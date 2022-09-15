@@ -28,14 +28,7 @@ function userDataFn(state, action) {
 function UserDataForm(props) {
   const [isCal, setIsCalc] = useState(false);
 
-  const [userData, dispachFn] = useReducer(userDataFn, {
-    gender: null,
-    age: "",
-    weight: "",
-    height: "",
-    activity: null,
-    goal: null,
-  });
+  const [userData, dispachFn] = useReducer(userDataFn, initState);
 
   const submitHandler = () => {
     if (userData.gender == null) {
@@ -80,7 +73,7 @@ function UserDataForm(props) {
           <div className="male-female__btns">
             <button
               className={
-                userData.gender == "MALE"
+                userData.gender === "MALE"
                   ? "active btn-form"
                   : "not-active btn-form"
               }
@@ -90,7 +83,7 @@ function UserDataForm(props) {
             </button>
             <button
               className={
-                userData.gender == "FEMALE"
+                userData.gender === "FEMALE"
                   ? "active btn-form"
                   : "not-active btn-form"
               }

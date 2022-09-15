@@ -1,0 +1,35 @@
+.scroll::-webkit-scrollbar {
+  width: 0;
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.scroll {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.dishes-card img {
+  height: 110px;
+  width: 130px;
+}
+
+.dishes-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  min-width: 300px;
+}
+
+.arrow {
+  position: absolute;
+  background-color: #f88439;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}

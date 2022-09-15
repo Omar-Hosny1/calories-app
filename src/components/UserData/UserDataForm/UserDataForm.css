@@ -1,12 +1,11 @@
 .user-data-form {
   width: 50%;
-  height: calc(100vh - 51.21px);
+  height: 100vh;
   position: relative;
-
   background-color: rgb(245 125 52);
   box-sizing: border-box;
-  padding: 50px 90px;
-  top: 51.21px;
+  padding: 50px 50px;
+  top: 0px;
   z-index: 10;
 }
 
@@ -164,7 +163,7 @@
 }
 .calc-btns {
   position: relative;
-  top: 25px;
+  top: 15px;
 }
 .right-win {
   animation: rightWin 2s forwards ease;

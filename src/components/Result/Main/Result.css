@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+span {
+  font-weight: 999;
+}
+
+.result-pg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  height: 100vh;
+  padding: 50px 50px;
+}
