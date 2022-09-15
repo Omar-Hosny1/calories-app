@@ -1,0 +1,29 @@
+.male-female span {
+  font-size: 25px;
+  margin: 5px 0;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+.male-female__btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.male-female__btns .btn-form {
+  width: 49%;
+  color: white;
+  padding: 12px 10px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  border: 0.5px solid black;
+}
+.not-active {
+  background-color: #ea6f27;
+}
+.active {
+  background-color: black;
+}

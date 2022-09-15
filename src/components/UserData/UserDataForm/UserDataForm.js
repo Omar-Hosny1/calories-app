@@ -1,4 +1,9 @@
 import React, { useReducer, useState } from "react";
+import Activity from "./Activity";
+import CalcRes from "./CalcRes";
+import Gender from "./Gender";
+import Goals from "./Goals";
+import UserAWH from "./UserAWH";
 import "./UserDataForm.css";
 
 const initState = {
@@ -93,7 +98,7 @@ function UserDataForm(props) {
   const maleHandler = () => {
     dispachFn({ id: "MALE" });
   };
-  const FaleHandler = () => {
+  const FemaleHandler = () => {
     dispachFn({ id: "FEMALE" });
   };
   const inputAgeChangeHandler = (e) => {
@@ -131,83 +136,31 @@ function UserDataForm(props) {
   return (
     <div className={ClassNames.main}>
       <div className="user-form">
-        <div className="male-female">
-          <span>Body Parameters</span>
-          <div className="male-female__btns">
-            <button className={ClassNames.genderMale} onClick={maleHandler}>
-              Male
-            </button>
-            <button className={ClassNames.genderFemale} onClick={FaleHandler}>
-              Female
-            </button>
-          </div>
-        </div>
-        <div className="age-weight-height">
-          <input
-            placeholder="Age"
-            value={userData.age}
-            onChange={inputAgeChangeHandler}
-          />
-          <input
-            placeholder="Weight (KG)"
-            value={userData.weight}
-            onChange={inputWeightChangeHandler}
-          />
-          <input
-            placeholder="Height (CM)"
-            value={userData.height}
-            onChange={inputHeightChangeHandler}
-          />
-        </div>
-        <div className="activity">
-          <span className="activity-span">Activity Level</span>
-          <p>
-            <strong>Middle : </strong> Activity that burns an additional 400-650
-            calories for females or 500-800 calories for males
-          </p>
-          <div className="line"></div>
-          <div className="lvl">
-            <div
-              className={ClassNames.activityLow}
-              onClick={activityLowHandler}
-            >
-              <span>LOW</span>
-            </div>
-            <div
-              className={ClassNames.activityMiddle}
-              onClick={activityMiddleHandler}
-            >
-              <span>MIDDLE</span>
-            </div>
-            <div
-              className={ClassNames.activityHigh}
-              onClick={activityHighHandler}
-            >
-              <span>HIGH</span>
-            </div>
-          </div>
-        </div>
-        <div className="goals">
-          <span>Goals</span>
-          <div className="goals__btns">
-            <button className={ClassNames.loseGoal} onClick={loseHandler}>
-              LOSE
-            </button>
-            <button
-              className={ClassNames.maintainGoal}
-              onClick={maintainHandler}
-            >
-              MAINTAIN
-            </button>
-            <button className={ClassNames.gainGoal} onClick={gainHandler}>
-              GAIN
-            </button>
-          </div>
-        </div>
-        <div className="calc-btns">
-          <button onClick={resetHandler}>clear</button>
-          <button onClick={submitHandler}>Calculate</button>
-        </div>
+        <Gender
+          ClassNames={ClassNames}
+          maleHandler={maleHandler}
+          FemaleHandler={FemaleHandler}
+        />
+        <UserAWH
+          userData={userData}
+          inputAgeChangeHandler={inputAgeChangeHandler}
+          inputWeightChangeHandler={inputWeightChangeHandler}
+          inputHeightChangeHandler={inputHeightChangeHandler}
+        />
+        <Activity
+          activityLowHandler={activityLowHandler}
+          activityMiddleHandler={activityMiddleHandler}
+          activityHighHandler={activityHighHandler}
+          ClassNames={ClassNames}
+        />
+        <Goals
+          loseHandler={loseHandler}
+          maintainHandler={maintainHandler}
+          gainHandler={gainHandler}
+          ClassNames={ClassNames}
+        />
+
+        <CalcRes resetHandler={resetHandler} submitHandler={submitHandler} />
       </div>
     </div>
   );

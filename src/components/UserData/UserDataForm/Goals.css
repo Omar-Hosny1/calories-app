@@ -1,0 +1,24 @@
+.goals {
+  margin-top: 90px;
+}
+.goals span {
+  font-size: 21px;
+  margin: 5px 0;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+.goals__btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.goals__btns button {
+  width: 32%;
+  color: white;
+  padding: 12px 10px;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  cursor: pointer;
+}

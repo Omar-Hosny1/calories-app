@@ -1,0 +1,28 @@
+.calc-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.calc-btns button:nth-child(1) {
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 700;
+  border: 0;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  cursor: pointer;
+}
+.calc-btns button:nth-child(2) {
+  font-weight: 700;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.calc-btns {
+  position: relative;
+  top: 15px;
+}

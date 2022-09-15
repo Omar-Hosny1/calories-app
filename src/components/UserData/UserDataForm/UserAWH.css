@@ -1,0 +1,19 @@
+.age-weight-height {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.age-weight-height input {
+  width: 32%;
+  outline: none;
+  border: 1.6px solid black;
+  padding: 10px;
+  padding-left: 15px;
+  border-radius: 20px;
+  background-color: transparent;
+}
+.age-weight-height input::placeholder {
+  color: black;
+  font-weight: 600;
+}
