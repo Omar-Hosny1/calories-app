@@ -116,14 +116,14 @@ function UserDataForm(props) {
             }}
           />
           <input
-            placeholder="Weight"
+            placeholder="Weight (KG)"
             value={userData.weight}
             onChange={(e) => {
               dispachFn({ id: "WEIGHT", weight: e.target.value });
             }}
           />
           <input
-            placeholder="Height"
+            placeholder="Height (CM)"
             value={userData.height}
             onChange={(e) => {
               dispachFn({ id: "HEIGHT", height: e.target.value });
