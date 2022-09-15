@@ -71,38 +71,73 @@ function UserDataForm(props) {
     props.enteredUserData(userData);
   };
 
+  const ClassNames = {
+    main:
+      isCal === true
+        ? "user-data-form left-win"
+        : isCal === false
+        ? "user-data-form right-win"
+        : "user-data-form",
+    genderMale:
+      userData.gender === "MALE" ? "active btn-form" : "not-active btn-form",
+    genderFemale:
+      userData.gender === "FEMALE" ? "active btn-form" : "not-active btn-form",
+    activityLow: userData.activity === "LOW" ? "active-circle" : "circle",
+    activityMiddle: userData.activity === "MIDDLE" ? "active-circle" : "circle",
+    activityHigh: userData.activity === "HIGH" ? "active-circle" : "circle",
+    loseGoal: userData.goal === "LOSE" ? "active" : "not-active",
+    maintainGoal: userData.goal === "MAINTAIN" ? "active" : "not-active",
+    gainGoal: userData.goal === "GAIN" ? "active" : "not-active",
+  };
+
+  const maleHandler = () => {
+    dispachFn({ id: "MALE" });
+  };
+  const FaleHandler = () => {
+    dispachFn({ id: "FEMALE" });
+  };
+  const inputAgeChangeHandler = (e) => {
+    dispachFn({ id: "AGE", age: e.target.value });
+  };
+  const inputWeightChangeHandler = (e) => {
+    dispachFn({ id: "WEIGHT", weight: e.target.value });
+  };
+  const inputHeightChangeHandler = (e) => {
+    dispachFn({ id: "HEIGHT", height: e.target.value });
+  };
+  const activityLowHandler = () => {
+    dispachFn({ id: "LOW" });
+  };
+  const activityMiddleHandler = () => {
+    dispachFn({ id: "MIDDLE" });
+  };
+  const activityHighHandler = () => {
+    dispachFn({ id: "HIGH" });
+  };
+  const loseHandler = () => {
+    dispachFn({ id: "LOSE" });
+  };
+  const maintainHandler = () => {
+    dispachFn({ id: "MAINTAIN" });
+  };
+  const gainHandler = () => {
+    dispachFn({ id: "GAIN" });
+  };
+  const resetHandler = () => {
+    dispachFn("reset");
+    setIsCalc(false);
+  };
+
   return (
-    <div
-      className={
-        isCal === true
-          ? "user-data-form left-win"
-          : isCal === false
-          ? "user-data-form right-win"
-          : "user-data-form"
-      }
-    >
+    <div className={ClassNames.main}>
       <div className="user-form">
         <div className="male-female">
           <span>Body Parameters</span>
           <div className="male-female__btns">
-            <button
-              className={
-                userData.gender === "MALE"
-                  ? "active btn-form"
-                  : "not-active btn-form"
-              }
-              onClick={() => dispachFn({ id: "MALE" })}
-            >
+            <button className={ClassNames.genderMale} onClick={maleHandler}>
               Male
             </button>
-            <button
-              className={
-                userData.gender === "FEMALE"
-                  ? "active btn-form"
-                  : "not-active btn-form"
-              }
-              onClick={() => dispachFn({ id: "FEMALE" })}
-            >
+            <button className={ClassNames.genderFemale} onClick={FaleHandler}>
               Female
             </button>
           </div>
@@ -111,23 +146,17 @@ function UserDataForm(props) {
           <input
             placeholder="Age"
             value={userData.age}
-            onChange={(e) => {
-              dispachFn({ id: "AGE", age: e.target.value });
-            }}
+            onChange={inputAgeChangeHandler}
           />
           <input
             placeholder="Weight (KG)"
             value={userData.weight}
-            onChange={(e) => {
-              dispachFn({ id: "WEIGHT", weight: e.target.value });
-            }}
+            onChange={inputWeightChangeHandler}
           />
           <input
             placeholder="Height (CM)"
             value={userData.height}
-            onChange={(e) => {
-              dispachFn({ id: "HEIGHT", height: e.target.value });
-            }}
+            onChange={inputHeightChangeHandler}
           />
         </div>
         <div className="activity">
@@ -139,26 +168,20 @@ function UserDataForm(props) {
           <div className="line"></div>
           <div className="lvl">
             <div
-              className={
-                userData.activity === "LOW" ? "active-circle" : "circle"
-              }
-              onClick={() => dispachFn({ id: "LOW" })}
+              className={ClassNames.activityLow}
+              onClick={activityLowHandler}
             >
               <span>LOW</span>
             </div>
             <div
-              className={
-                userData.activity === "MIDDLE" ? "active-circle" : "circle"
-              }
-              onClick={() => dispachFn({ id: "MIDDLE" })}
+              className={ClassNames.activityMiddle}
+              onClick={activityMiddleHandler}
             >
               <span>MIDDLE</span>
             </div>
             <div
-              className={
-                userData.activity === "HIGH" ? "active-circle" : "circle"
-              }
-              onClick={() => dispachFn({ id: "HIGH" })}
+              className={ClassNames.activityHigh}
+              onClick={activityHighHandler}
             >
               <span>HIGH</span>
             </div>
@@ -167,35 +190,22 @@ function UserDataForm(props) {
         <div className="goals">
           <span>Goals</span>
           <div className="goals__btns">
-            <button
-              className={userData.goal === "LOSE" ? "active" : "not-active"}
-              onClick={() => dispachFn({ id: "LOSE" })}
-            >
+            <button className={ClassNames.loseGoal} onClick={loseHandler}>
               LOSE
             </button>
             <button
-              className={userData.goal === "MAINTAIN" ? "active" : "not-active"}
-              onClick={() => dispachFn({ id: "MAINTAIN" })}
+              className={ClassNames.maintainGoal}
+              onClick={maintainHandler}
             >
               MAINTAIN
             </button>
-            <button
-              className={userData.goal === "GAIN" ? "active" : "not-active"}
-              onClick={() => dispachFn({ id: "GAIN" })}
-            >
+            <button className={ClassNames.gainGoal} onClick={gainHandler}>
               GAIN
             </button>
           </div>
         </div>
         <div className="calc-btns">
-          <button
-            onClick={() => {
-              dispachFn("reset");
-              setIsCalc(false);
-            }}
-          >
-            clear
-          </button>
+          <button onClick={resetHandler}>clear</button>
           <button onClick={submitHandler}>Calculate</button>
         </div>
       </div>

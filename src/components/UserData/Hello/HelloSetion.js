@@ -8,8 +8,8 @@ function HelloSetion() {
       <div className="wel-com">
         <h1>CALORIES CALCULATOR</h1>
         <p>
-          Calculate optimmal macronutrient ratios for your body, enter your Age,
-          Weight, Height, Gended, and activity level
+          Calculate optimal macronutrient ratios for your body, enter your Age,
+          Weight, Height, Gender, and activity level.
         </p>
       </div>
     </div>
