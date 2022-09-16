@@ -129,7 +129,8 @@ function UserDataForm(props) {
     dispachFn({ id: "GAIN" });
   };
   const resetHandler = () => {
-    dispachFn("reset");
+    dispachFn({ id: "reset" });
+    props.enteredUserData(initState);
     setIsCalc(false);
   };
 
