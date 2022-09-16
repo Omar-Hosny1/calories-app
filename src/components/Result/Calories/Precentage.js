@@ -23,7 +23,7 @@ export default function Precentage({ data, calories }) {
       <div className="amount">
         <p>Carbohydrate</p>
         <p>
-          <span>{carb}g</span> / day
+          <span>{carb?.toFixed()}g</span> / day
         </p>
       </div>
       <div className="amount">
