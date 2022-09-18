@@ -8,11 +8,14 @@ export default function ResultPage({ data }) {
   const [show, setShown] = useState(false);
 
   useEffect(() => {
-    if (data.gender === null) {
-      setShown(false);
-    } else {
-      setShown(true);
-    }
+    const timer = setTimeout(() => {
+      if (data.gender === null) {
+        setShown(false);
+      } else {
+        setShown(true);
+      }
+    }, 500);
+    return () => clearTimeout(timer);
   }, [data]);
 
   return (
