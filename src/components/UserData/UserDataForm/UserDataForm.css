@@ -1,6 +1,6 @@
 .user-data-form {
   width: 50%;
-  height: 100vh;
+  height: fit-content;
   position: relative;
   background-color: rgb(245 125 52);
   box-sizing: border-box;
