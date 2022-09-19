@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useState, useRef } from "react";
+import React, { useReducer, useState } from "react";
 import Activity from "./Activity";
 import CalcRes from "./CalcRes";
 import Gender from "./Gender";
@@ -31,7 +31,6 @@ function userDataFn(state, action) {
 }
 
 function UserDataForm(props) {
-  const ref = useRef();
   const [isCal, setIsCalc] = useState(null);
 
   const [userData, dispachFn] = useReducer(userDataFn, initState);
@@ -76,11 +75,6 @@ function UserDataForm(props) {
     setIsCalc(true);
     props.enteredUserData(userData);
   };
-
-  useEffect(() => {
-    props.div(ref);
-    // eslint-disable-next-line
-  }, []);
 
   const ClassNames = {
     main:
@@ -141,7 +135,7 @@ function UserDataForm(props) {
   };
 
   return (
-    <div ref={ref} className={ClassNames.main}>
+    <div className={ClassNames.main}>
       <div className="user-form">
         <Gender
           ClassNames={ClassNames}

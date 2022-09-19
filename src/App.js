@@ -7,7 +7,6 @@ import UserDataForm from "./components/UserData/UserDataForm/UserDataForm";
 
 function App() {
   const [data, setData] = useState({});
-  const [div, setDiv] = useState();
 
   const calculateCaloriesHandler = (userData) => {
     setData({
@@ -20,19 +19,12 @@ function App() {
     });
   };
 
-  const divHandler = (div) => {
-    setDiv(div);
-  };
-
   return (
     <div className="App">
       <Header />
-      <UserDataForm
-        enteredUserData={calculateCaloriesHandler}
-        div={divHandler}
-      />
+      <UserDataForm enteredUserData={calculateCaloriesHandler} />
       <HelloSetion />
-      <ResultPage data={data} div={div} />
+      <ResultPage data={data} />
     </div>
   );
 }
